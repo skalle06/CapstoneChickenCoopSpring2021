@@ -1,0 +1,1611 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 2
+Title "Coop Main Door"
+Date "2020-04-24"
+Rev "4"
+Comp "UofL ECE Capstone"
+Comment1 "Adedotun Abe"
+Comment2 "Michael Portaro"
+Comment3 "Nathan Schimpf"
+Comment4 "Jacob Berdichevsky"
+$EndDescr
+Wire Wire Line
+	32550 2250 32550 2200
+Wire Wire Line
+	31350 2250 32550 2250
+Wire Wire Line
+	32550 1950 32550 2050
+Wire Wire Line
+	31350 1950 32550 1950
+$Comp
+L Device:Battery_Cell BT1
+U 1 1 5DBC9C63
+P 31350 2150
+F 0 "BT1" H 31468 2246 50  0000 L CNN
+F 1 "Battery_Cell" H 31468 2155 50  0000 L CNN
+F 2 "" V 31350 2210 50  0001 C CNN
+F 3 "~" V 31350 2210 50  0001 C CNN
+	1    31350 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	31750 1900 32550 1900
+Wire Wire Line
+	31750 1300 31750 1900
+Wire Wire Line
+	32550 1300 32550 1750
+Wire Wire Line
+	32050 1300 32550 1300
+$Comp
+L Device:Solar_Cell SC1
+U 1 1 5DBB4ADF
+P 31850 1300
+F 0 "SC1" H 31958 1396 50  0000 L CNN
+F 1 "Solar_Cell" H 31958 1305 50  0000 L CNN
+F 2 "" V 31850 1360 50  0001 C CNN
+F 3 "~" V 31850 1360 50  0001 C CNN
+	1    31850 1300
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+12V #PWR027
+U 1 1 5DBE4411
+P 32300 2350
+F 0 "#PWR027" H 32300 2200 50  0001 C CNN
+F 1 "+12V" V 32315 2478 50  0000 L CNN
+F 2 "" H 32300 2350 50  0001 C CNN
+F 3 "" H 32300 2350 50  0001 C CNN
+	1    32300 2350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L CapstoneSchematic:CMP12 U2
+U 1 1 5DC684DB
+P 33400 1650
+F 0 "U2" V 33829 1678 50  0000 L CNN
+F 1 "CMP12-CapstoneLib" V 33920 1678 50  0000 L CNN
+F 2 "" H 33700 1450 50  0001 C CNN
+F 3 "" H 33700 1450 50  0001 C CNN
+	1    33400 1650
+	0    1    1    0   
+$EndComp
+Text Notes 33615 7050 0    50   ~ 0
+Main Door Schematic
+$Sheet
+S 23300 600  11650 7900
+U 5DC4244F
+F0 "Sheet5DC4244E" 50
+F1 "Alarm.sch" 50
+$EndSheet
+$Comp
+L CapstoneSchematic:LEDModule LED_GREEN1
+U 1 1 5DC91461
+P 28100 4900
+F 0 "LED_GREEN1" H 28031 4779 50  0000 R CNN
+F 1 "200" H 28031 4688 50  0000 R CNN
+F 2 "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_Type094_RT03502HBLU_1x02_P5.00mm_Horizontal" V 28170 4750 50  0001 C CNN
+F 3 "~" H 28100 4750 50  0001 C CNN
+	1    28100 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L CapstoneSchematic:LEDModule LED_RED1
+U 1 1 5DCA452F
+P 26950 4950
+F 0 "LED_RED1" H 26881 4829 50  0000 R CNN
+F 1 "200" H 26881 4738 50  0000 R CNN
+F 2 "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_Type094_RT03502HBLU_1x02_P5.00mm_Horizontal" V 27020 4800 50  0001 C CNN
+F 3 "~" H 26950 4800 50  0001 C CNN
+	1    26950 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR010
+U 1 1 5DCB250A
+P 28400 5200
+F 0 "#PWR010" H 28400 4950 50  0001 C CNN
+F 1 "GND" V 28405 5072 50  0000 R CNN
+F 2 "" H 28400 5200 50  0001 C CNN
+F 3 "" H 28400 5200 50  0001 C CNN
+	1    28400 5200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 5DCB32FA
+P 27250 5250
+F 0 "#PWR06" H 27250 5000 50  0001 C CNN
+F 1 "GND" V 27255 5122 50  0000 R CNN
+F 2 "" H 27250 5250 50  0001 C CNN
+F 3 "" H 27250 5250 50  0001 C CNN
+	1    27250 5250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	32300 2350 32550 2350
+$Comp
+L pspice:0 #GND03
+U 1 1 5DD841FC
+P 32250 2500
+F 0 "#GND03" H 32250 2400 50  0001 C CNN
+F 1 "0" V 32250 2544 50  0000 L CNN
+F 2 "" H 32250 2500 50  0001 C CNN
+F 3 "~" H 32250 2500 50  0001 C CNN
+	1    32250 2500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	32250 2500 32550 2500
+$Comp
+L CapstoneSchematic:LinearActuator LA1
+U 1 1 5DDA921B
+P 25400 3250
+F 0 "LA1" V 25738 2522 50  0000 R CNN
+F 1 "LinearActuator" V 25647 2522 50  0000 R CNN
+F 2 "" H 25750 3000 50  0001 C CNN
+F 3 "" H 25750 3000 50  0001 C CNN
+	1    25400 3250
+	0    -1   -1   0   
+$EndComp
+Text Label 27775 4275 0    50   ~ 0
+SAS_Int2
+Wire Bus Line
+	28850 2050 28850 3050
+Wire Wire Line
+	30400 2450 30400 2900
+Text Label 29995 3300 2    50   ~ 0
+LoRa4
+Text Label 27500 2350 0    50   ~ 0
+LoRa4
+Text Label 27500 2250 0    50   ~ 0
+LoRa3
+Text Label 27500 2150 0    50   ~ 0
+LoRa2
+Wire Bus Line
+	27600 2050 28850 2050
+Entry Wire Line
+	27500 2150 27600 2050
+Entry Wire Line
+	27500 2350 27600 2250
+Entry Wire Line
+	27500 2250 27600 2150
+Entry Wire Line
+	29895 3200 29995 3300
+Entry Wire Line
+	29895 3300 29995 3400
+Wire Wire Line
+	31300 3500 31300 4100
+Wire Wire Line
+	31000 4200 32050 4200
+Wire Wire Line
+	31300 3500 31800 3500
+Wire Wire Line
+	31000 4100 31300 4100
+Wire Wire Line
+	31000 4300 31650 4300
+Wire Wire Line
+	31450 4600 31650 4600
+Wire Wire Line
+	30300 1600 30300 1650
+$Comp
+L Connector:Screw_Terminal_01x02 J1
+U 1 1 5DD6235D
+P 30400 1400
+F 0 "J1" V 30364 1212 50  0000 R CNN
+F 1 "VoltageIn" V 30273 1212 50  0000 R CNN
+F 2 "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_Type094_RT03502HBLU_1x02_P5.00mm_Horizontal" H 30400 1400 50  0001 C CNN
+F 3 "~" H 30400 1400 50  0001 C CNN
+	1    30400 1400
+	0    1    -1   0   
+$EndComp
+$Comp
+L CapstoneSchematic:LaserSensor U1
+U 1 1 5DC2BFC6
+P 29200 2850
+F 0 "U1" H 30178 2696 50  0000 L CNN
+F 1 "LaserSensor" H 30178 2605 50  0000 L CNN
+F 2 "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_Type094_RT03503HBLU_1x03_P5.00mm_Horizontal" H 29550 2800 50  0001 C CNN
+F 3 "" H 29550 2800 50  0001 C CNN
+	1    29200 2850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR013
+U 1 1 5DC36A10
+P 29450 2650
+F 0 "#PWR013" H 29450 2400 50  0001 C CNN
+F 1 "GND" V 29455 2522 50  0000 R CNN
+F 2 "" H 29450 2650 50  0001 C CNN
+F 3 "" H 29450 2650 50  0001 C CNN
+	1    29450 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR012
+U 1 1 5DC36F90
+P 29350 2650
+F 0 "#PWR012" H 29350 2500 50  0001 C CNN
+F 1 "+5V" V 29365 2778 50  0000 L CNN
+F 2 "" H 29350 2650 50  0001 C CNN
+F 3 "" H 29350 2650 50  0001 C CNN
+	1    29350 2650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	30300 1650 30300 1800
+Connection ~ 30300 1650
+Wire Wire Line
+	30150 1650 30300 1650
+$Comp
+L pspice:0 #GND02
+U 1 1 5DD7F5FF
+P 30150 1650
+F 0 "#GND02" H 30150 1550 50  0001 C CNN
+F 1 "0" V 30150 1694 50  0000 L CNN
+F 2 "" H 30150 1650 50  0001 C CNN
+F 3 "~" H 30150 1650 50  0001 C CNN
+	1    30150 1650
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+12V #PWR017
+U 1 1 5DD6AE5A
+P 30400 1650
+F 0 "#PWR017" H 30400 1500 50  0001 C CNN
+F 1 "+12V" V 30415 1778 50  0000 L CNN
+F 2 "" H 30400 1650 50  0001 C CNN
+F 3 "" H 30400 1650 50  0001 C CNN
+	1    30400 1650
+	0    1    1    0   
+$EndComp
+Connection ~ 30400 1650
+Wire Wire Line
+	30400 1600 30400 1650
+Wire Wire Line
+	30400 1650 30400 1800
+$Comp
+L CapstoneSchematic:Linear_Regulator LR1
+U 1 1 5DD3D0F0
+P 30400 2100
+F 0 "LR1" H 30425 2315 50  0000 C CNN
+F 1 "Linear_Regulator" H 30425 2224 50  0000 C CNN
+F 2 "Capstone_PCB_Lib:Linear Regulator" H 30400 1900 50  0001 C CNN
+F 3 "" H 30400 1900 50  0001 C CNN
+	1    30400 2100
+	0    1    1    0   
+$EndComp
+$Comp
+L CapstoneSchematic:PhotoResistor PR1
+U 1 1 5DCD4A6E
+P 32100 3200
+F 0 "PR1" H 32450 3225 50  0000 C CNN
+F 1 "PhotoResistor" H 32450 3134 50  0000 C CNN
+F 2 "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_Type094_RT03503HBLU_1x03_P5.00mm_Horizontal" H 32450 3050 50  0001 C CNN
+F 3 "" H 32450 3050 50  0001 C CNN
+	1    32100 3200
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+3.3V #PWR026
+U 1 1 5DC7F41E
+P 31900 3800
+F 0 "#PWR026" H 31900 3650 50  0001 C CNN
+F 1 "+3.3V" H 31915 3973 50  0000 C CNN
+F 2 "" H 31900 3800 50  0001 C CNN
+F 3 "" H 31900 3800 50  0001 C CNN
+	1    31900 3800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	30300 2450 30200 2450
+$Comp
+L power:GND #PWR016
+U 1 1 5DC7D7D6
+P 30200 2450
+F 0 "#PWR016" H 30200 2200 50  0001 C CNN
+F 1 "GND" V 30205 2322 50  0000 R CNN
+F 2 "" H 30200 2450 50  0001 C CNN
+F 3 "" H 30200 2450 50  0001 C CNN
+	1    30200 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR028
+U 1 1 5DCB51EE
+P 32450 3900
+F 0 "#PWR028" H 32450 3650 50  0001 C CNN
+F 1 "GND" V 32455 3772 50  0000 R CNN
+F 2 "" H 32450 3900 50  0001 C CNN
+F 3 "" H 32450 3900 50  0001 C CNN
+	1    32450 3900
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+3.3V #PWR029
+U 1 1 5DCB4C18
+P 32450 4500
+F 0 "#PWR029" H 32450 4350 50  0001 C CNN
+F 1 "+3.3V" V 32465 4628 50  0000 L CNN
+F 2 "" H 32450 4500 50  0001 C CNN
+F 3 "" H 32450 4500 50  0001 C CNN
+	1    32450 4500
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR025
+U 1 1 5DC900BD
+P 31900 3200
+F 0 "#PWR025" H 31900 2950 50  0001 C CNN
+F 1 "GND" V 31905 3072 50  0000 R CNN
+F 2 "" H 31900 3200 50  0001 C CNN
+F 3 "" H 31900 3200 50  0001 C CNN
+	1    31900 3200
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+3.3V #PWR019
+U 1 1 5DC71C84
+P 30600 2900
+F 0 "#PWR019" H 30600 2750 50  0001 C CNN
+F 1 "+3.3V" V 30615 3028 50  0000 L CNN
+F 2 "" H 30600 2900 50  0001 C CNN
+F 3 "" H 30600 2900 50  0001 C CNN
+	1    30600 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR020
+U 1 1 5DC66997
+P 30600 5000
+F 0 "#PWR020" H 30600 4750 50  0001 C CNN
+F 1 "GND" V 30605 4872 50  0000 R CNN
+F 2 "" H 30600 5000 50  0001 C CNN
+F 3 "" H 30600 5000 50  0001 C CNN
+	1    30600 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR024
+U 1 1 5DC5291A
+P 31650 4500
+F 0 "#PWR024" H 31650 4250 50  0001 C CNN
+F 1 "GND" H 31655 4327 50  0000 C CNN
+F 2 "" H 31650 4500 50  0001 C CNN
+F 3 "" H 31650 4500 50  0001 C CNN
+	1    31650 4500
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR023
+U 1 1 5DC52169
+P 31450 4600
+F 0 "#PWR023" H 31450 4450 50  0001 C CNN
+F 1 "+5V" H 31465 4773 50  0000 C CNN
+F 2 "" H 31450 4600 50  0001 C CNN
+F 3 "" H 31450 4600 50  0001 C CNN
+	1    31450 4600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L CapstoneSchematic:ArduinoRGBShield J2
+U 1 1 5DC4EC30
+P 31850 4500
+F 0 "J2" V 31912 4644 50  0000 L CNN
+F 1 "ArduinoRGBShield" V 32003 4644 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" H 31850 4500 50  0001 C CNN
+F 3 "~" H 31850 4500 50  0001 C CNN
+	1    31850 4500
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+5V #PWR021
+U 1 1 5DC1B373
+P 30700 2900
+F 0 "#PWR021" H 30700 2750 50  0001 C CNN
+F 1 "+5V" V 30715 3028 50  0000 L CNN
+F 2 "" H 30700 2900 50  0001 C CNN
+F 3 "" H 30700 2900 50  0001 C CNN
+	1    30700 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR08
+U 1 1 5DC11130
+P 27500 2550
+F 0 "#PWR08" H 27500 2300 50  0001 C CNN
+F 1 "GND" H 27505 2377 50  0000 C CNN
+F 2 "" H 27500 2550 50  0001 C CNN
+F 3 "" H 27500 2550 50  0001 C CNN
+	1    27500 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR07
+U 1 1 5DC1040D
+P 27500 2050
+F 0 "#PWR07" H 27500 1900 50  0001 C CNN
+F 1 "+5V" H 27515 2223 50  0000 C CNN
+F 2 "" H 27500 2050 50  0001 C CNN
+F 3 "" H 27500 2050 50  0001 C CNN
+	1    27500 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Sensor_Temperature:MCP9700AT-ELT T1
+U 1 1 5DC27357
+P 32450 4200
+F 0 "T1" H 32120 4246 50  0000 R CNN
+F 1 "Temp Sensor" H 32120 4155 50  0001 R CNN
+F 2 "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_Type094_RT03503HBLU_1x03_P5.00mm_Horizontal" H 32450 3800 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001942G.pdf" H 32450 4200 50  0001 C CNN
+	1    32450 4200
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 5DC16D22
+P 24150 4700
+F 0 "#PWR01" H 24150 4450 50  0001 C CNN
+F 1 "GND" V 24155 4572 50  0000 R CNN
+F 2 "" H 24150 4700 50  0001 C CNN
+F 3 "" H 24150 4700 50  0001 C CNN
+	1    24150 4700
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR02
+U 1 1 5DC1AA6C
+P 24150 4200
+F 0 "#PWR02" H 24150 4050 50  0001 C CNN
+F 1 "+5V" V 24165 4328 50  0000 L CNN
+F 2 "" H 24150 4200 50  0001 C CNN
+F 3 "" H 24150 4200 50  0001 C CNN
+	1    24150 4200
+	1    0    0    -1  
+$EndComp
+Connection ~ 25500 4550
+Wire Wire Line
+	25550 4550 25500 4550
+Connection ~ 25400 4350
+Wire Wire Line
+	25500 4550 25300 4550
+Wire Wire Line
+	25500 4900 25300 4900
+Wire Wire Line
+	25500 4550 25500 4900
+$Comp
+L power:+12V #PWR03
+U 1 1 5DBC046C
+P 25400 4350
+F 0 "#PWR03" H 25400 4200 50  0001 C CNN
+F 1 "+12V" H 25415 4523 50  0000 C CNN
+F 2 "" H 25400 4350 50  0001 C CNN
+F 3 "" H 25400 4350 50  0001 C CNN
+	1    25400 4350
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	25400 4700 25300 4700
+Wire Wire Line
+	25400 4350 25400 4700
+Wire Wire Line
+	25300 4350 25400 4350
+$Comp
+L pspice:0 #GND01
+U 1 1 5DC3A737
+P 25550 4550
+F 0 "#GND01" H 25550 4450 50  0001 C CNN
+F 1 "0" V 25550 4594 50  0000 L CNN
+F 2 "" H 25550 4550 50  0001 C CNN
+F 3 "~" H 25550 4550 50  0001 C CNN
+	1    25550 4550
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	29550 2650 29550 3700
+Wire Wire Line
+	29550 3700 30000 3700
+Entry Wire Line
+	29560 4300 29660 4200
+Entry Wire Line
+	29660 4300 29560 4400
+Entry Wire Line
+	24045 4500 24145 4400
+$Comp
+L CapstoneSchematic-rescue:Arduino_UNO_R3-MCU_Module A1
+U 1 1 5DBB2CDA
+P 30500 3900
+F 0 "A1" V 30546 2756 50  0000 R CNN
+F 1 "Arduino_UNO_R3" V 30455 2756 50  0000 R CNN
+F 2 "Module:Arduino_UNO_R3" H 30650 2850 50  0001 L CNN
+F 3 "https://www.arduino.cc/en/Main/arduinoBoardUno" H 30300 4950 50  0001 C CNN
+	1    30500 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	30000 4200 29660 4200
+Wire Wire Line
+	29660 4300 30000 4300
+Wire Wire Line
+	29995 3800 30000 3800
+Wire Wire Line
+	29995 3400 30000 3400
+Wire Wire Line
+	29995 3300 30000 3300
+Wire Wire Line
+	24145 4600 24150 4600
+Wire Wire Line
+	24145 4500 24150 4500
+Text Label 30000 4300 2    50   ~ 0
+IN2
+Text Label 30000 4200 2    50   ~ 0
+IN1
+Text Label 24050 4400 2    50   ~ 0
+IN1
+Wire Wire Line
+	31000 4400 31650 4400
+$Comp
+L CapstoneSchematic:ProxSensor MPS1
+U 1 1 5DF46B30
+P 29400 6750
+F 0 "MPS1" H 29675 6815 39  0000 C CNN
+F 1 "ProxSensor" H 29675 6898 50  0000 C CNN
+F 2 "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_Type094_RT03503HBLU_1x03_P5.00mm_Horizontal" H 29850 6700 50  0001 C CNN
+F 3 "" H 29850 6700 50  0001 C CNN
+	1    29400 6750
+	-1   0    0    1   
+$EndComp
+$Comp
+L CapstoneSchematic:ProxSensor MPS2
+U 1 1 5DF47D78
+P 30300 6750
+F 0 "MPS2" H 30575 6815 39  0000 C CNN
+F 1 "ProxSensor" H 30575 6898 50  0000 C CNN
+F 2 "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_Type094_RT03503HBLU_1x03_P5.00mm_Horizontal" H 30750 6700 50  0001 C CNN
+F 3 "" H 30750 6700 50  0001 C CNN
+	1    30300 6750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	29100 6300 29100 5550
+Wire Wire Line
+	29100 5550 29800 5550
+Wire Wire Line
+	29800 5550 29800 4500
+Wire Wire Line
+	29800 4500 30000 4500
+$Comp
+L power:+5V #PWR014
+U 1 1 5DF5591E
+P 29500 6600
+F 0 "#PWR014" H 29500 6450 50  0001 C CNN
+F 1 "+5V" H 29515 6773 50  0000 C CNN
+F 2 "" H 29500 6600 50  0001 C CNN
+F 3 "" H 29500 6600 50  0001 C CNN
+	1    29500 6600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR018
+U 1 1 5DF566EE
+P 30400 6600
+F 0 "#PWR018" H 30400 6450 50  0001 C CNN
+F 1 "+5V" H 30415 6773 50  0000 C CNN
+F 2 "" H 30400 6600 50  0001 C CNN
+F 3 "" H 30400 6600 50  0001 C CNN
+	1    30400 6600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR015
+U 1 1 5DF56B87
+P 29650 6600
+F 0 "#PWR015" H 29650 6350 50  0001 C CNN
+F 1 "GND" H 29655 6427 50  0000 C CNN
+F 2 "" H 29650 6600 50  0001 C CNN
+F 3 "" H 29650 6600 50  0001 C CNN
+	1    29650 6600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR011
+U 1 1 5DF5704D
+P 28750 6600
+F 0 "#PWR011" H 28750 6350 50  0001 C CNN
+F 1 "GND" H 28755 6427 50  0000 C CNN
+F 2 "" H 28750 6600 50  0001 C CNN
+F 3 "" H 28750 6600 50  0001 C CNN
+	1    28750 6600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	30000 4600 30000 4700
+Wire Wire Line
+	28800 3600 30000 3600
+$Comp
+L CapstoneSchematic:LoRa ULoRa1
+U 1 1 5DC1AD46
+P 27400 2050
+F 0 "ULoRa1" H 28778 1996 50  0000 L CNN
+F 1 "LoRa" H 28778 1905 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Horizontal" H 27950 1850 50  0001 C CNN
+F 3 "" H 27950 1850 50  0001 C CNN
+	1    27400 2050
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	25750 3300 25750 3425
+Wire Wire Line
+	25750 3425 25725 3425
+Wire Wire Line
+	25300 4450 25725 4450
+Text Label 30000 3800 2    50   ~ 0
+LoRa2
+Wire Bus Line
+	29895 3050 29900 3050
+Connection ~ 29895 3050
+Wire Bus Line
+	28850 3050 29895 3050
+Text Label 29875 3600 2    50   ~ 0
+SAS_Int2
+Text Label 26950 4950 0    50   ~ 0
+LED_R
+$Comp
+L power:+5V #PWR09
+U 1 1 5E8A92AF
+P 28100 4900
+F 0 "#PWR09" H 28100 4750 50  0001 C CNN
+F 1 "+5V" V 28115 5028 50  0000 L CNN
+F 2 "" H 28100 4900 50  0001 C CNN
+F 3 "" H 28100 4900 50  0001 C CNN
+	1    28100 4900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	26950 4825 26950 4950
+Entry Wire Line
+	29995 3800 29895 3900
+Wire Wire Line
+	29125 4000 30000 4000
+Wire Wire Line
+	29125 4825 26950 4825
+Wire Wire Line
+	29125 4000 29125 4825
+Wire Wire Line
+	25725 3425 25725 4450
+$Comp
+L power:GND #PWR05
+U 1 1 5E8177E0
+P 26525 4325
+F 0 "#PWR05" H 26525 4075 50  0001 C CNN
+F 1 "GND" V 26530 4197 50  0000 R CNN
+F 2 "" H 26525 4325 50  0001 C CNN
+F 3 "" H 26525 4325 50  0001 C CNN
+	1    26525 4325
+	0    1    1    0   
+$EndComp
+$Comp
+L CapstoneSchematic:SnapActionSwitch SAS2
+U 1 1 5DBEAB00
+P 26525 4125
+F 0 "SAS2" H 27150 4300 50  0000 C CNN
+F 1 "SnapActionSwitch" H 27150 4209 50  0000 C CNN
+F 2 "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_Type094_RT03503HBLU_1x03_P5.00mm_Horizontal" H 26475 4025 50  0001 C CNN
+F 3 "" H 26475 4025 50  0001 C CNN
+	1    26525 4125
+	1    0    0    -1  
+$EndComp
+$Comp
+L CapstoneSchematic:SnapActionSwitch SAS1
+U 1 1 5E9451EF
+P 26525 3400
+F 0 "SAS1" H 27150 3575 50  0000 C CNN
+F 1 "SnapActionSwitch" H 27150 3484 50  0000 C CNN
+F 2 "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_Type094_RT03503HBLU_1x03_P5.00mm_Horizontal" H 26475 3300 50  0001 C CNN
+F 3 "" H 26475 3300 50  0001 C CNN
+	1    26525 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5E9474E0
+P 26525 3750
+F 0 "#PWR04" H 26525 3500 50  0001 C CNN
+F 1 "GND" V 26530 3622 50  0000 R CNN
+F 2 "" H 26525 3750 50  0001 C CNN
+F 3 "" H 26525 3750 50  0001 C CNN
+	1    26525 3750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	28050 3500 30000 3500
+Wire Wire Line
+	27775 4275 28800 4275
+Wire Wire Line
+	28800 3600 28800 4275
+Text Label 29875 3500 2    50   ~ 0
+SAS_Int1
+Wire Wire Line
+	26525 4475 26200 4475
+Wire Wire Line
+	26200 3600 26525 3600
+Wire Wire Line
+	27775 4425 27850 4425
+Wire Wire Line
+	27850 4425 27850 4800
+Wire Wire Line
+	26200 3600 26200 4475
+Wire Wire Line
+	28050 3500 28050 3800
+Wire Wire Line
+	27775 3800 28050 3800
+Wire Wire Line
+	27775 3450 27775 3175
+Wire Wire Line
+	27775 3175 26250 3175
+Wire Wire Line
+	26250 3175 26250 3300
+Wire Wire Line
+	26250 3300 25950 3300
+$Comp
+L power:+3.3V #PWR022
+U 1 1 5E967A7C
+P 31150 3700
+F 0 "#PWR022" H 31150 3550 50  0001 C CNN
+F 1 "+3.3V" H 31165 3873 50  0000 C CNN
+F 2 "" H 31150 3700 50  0001 C CNN
+F 3 "" H 31150 3700 50  0001 C CNN
+	1    31150 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	31150 3700 31000 3700
+Text Label 27875 3800 0    50   ~ 0
+SAS_Int1
+Text Label 30000 3400 2    50   ~ 0
+LoRa3
+Text Notes -2950 9800 0    50   ~ 0
+Notes:\nThere was an accidental junction on the Common and 12V for the Relays, need to fix\n\nInterrupts need rewiring: https://www.instructables.com/id/Arduino-Interrupts/\n-THe COMM goes to GND for 5V line\n\nLinear Reg,put pin names on silkscreen\n\nLED_G should just go to 5V line and not be connected to arduino.\n\nMake AREF Accessible\nTo debounce switch will need to put a .1 micro f cap on gnd and input pin
+$Comp
+L CapstoneSchematic:4RelayModule RM?
+U 1 1 60627C17
+P 24250 4400
+F 0 "RM?" H 24725 5615 50  0000 C CNN
+F 1 "4RelayModule" H 24725 5524 50  0000 C CNN
+F 2 "" H 24706 4948 50  0001 C CNN
+F 3 "" H 24706 4948 50  0001 C CNN
+	1    24250 4400
+	1    0    0    -1  
+$EndComp
+Entry Wire Line
+	24145 4500 24045 4600
+Entry Wire Line
+	24045 4700 24145 4600
+Text Label 24050 4600 2    50   ~ 0
+IN3
+Text Label 24050 4700 2    50   ~ 0
+IN4
+Text Label 24050 4500 2    50   ~ 0
+IN2
+Entry Wire Line
+	24145 4300 24045 4400
+Wire Wire Line
+	25300 4800 27850 4800
+Wire Bus Line
+	24045 5435 29560 5435
+Wire Wire Line
+	9450 1600 9450 1550
+Wire Wire Line
+	8250 1600 9450 1600
+Wire Wire Line
+	9450 1300 9450 1400
+Wire Wire Line
+	8250 1300 9450 1300
+$Comp
+L Device:Battery_Cell BT?
+U 1 1 60901813
+P 8250 1500
+F 0 "BT?" H 8368 1596 50  0000 L CNN
+F 1 "Battery_Cell" H 8368 1505 50  0000 L CNN
+F 2 "" V 8250 1560 50  0001 C CNN
+F 3 "~" V 8250 1560 50  0001 C CNN
+	1    8250 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8650 1250 9450 1250
+Wire Wire Line
+	8650 650  8650 1250
+Wire Wire Line
+	9450 650  9450 1100
+Wire Wire Line
+	8950 650  9450 650 
+$Comp
+L Device:Solar_Cell SC?
+U 1 1 6090181D
+P 8750 650
+F 0 "SC?" H 8858 746 50  0000 L CNN
+F 1 "Solar_Cell" H 8858 655 50  0000 L CNN
+F 2 "" V 8750 710 50  0001 C CNN
+F 3 "~" V 8750 710 50  0001 C CNN
+	1    8750 650 
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 60901823
+P 9200 1700
+F 0 "#PWR?" H 9200 1550 50  0001 C CNN
+F 1 "+12V" V 9215 1828 50  0000 L CNN
+F 2 "" H 9200 1700 50  0001 C CNN
+F 3 "" H 9200 1700 50  0001 C CNN
+	1    9200 1700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L CapstoneSchematic:CMP12 U?
+U 1 1 60901829
+P 10300 1000
+F 0 "U?" V 10729 1028 50  0000 L CNN
+F 1 "CMP12-CapstoneLib" V 10820 1028 50  0000 L CNN
+F 2 "" H 10600 800 50  0001 C CNN
+F 3 "" H 10600 800 50  0001 C CNN
+	1    10300 1000
+	0    1    1    0   
+$EndComp
+Text Notes 10165 6400 0    50   ~ 0
+Main Door Schematic
+$Comp
+L CapstoneSchematic:LEDModule LED_GREEN?
+U 1 1 60901830
+P 5000 4250
+F 0 "LED_GREEN?" H 4931 4129 50  0000 R CNN
+F 1 "200" H 4931 4038 50  0000 R CNN
+F 2 "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_Type094_RT03502HBLU_1x02_P5.00mm_Horizontal" V 5070 4100 50  0001 C CNN
+F 3 "~" H 5000 4100 50  0001 C CNN
+	1    5000 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L CapstoneSchematic:LEDModule LED_RED?
+U 1 1 60901836
+P 3850 4300
+F 0 "LED_RED?" H 3781 4179 50  0000 R CNN
+F 1 "200" H 3781 4088 50  0000 R CNN
+F 2 "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_Type094_RT03502HBLU_1x02_P5.00mm_Horizontal" V 3920 4150 50  0001 C CNN
+F 3 "~" H 3850 4150 50  0001 C CNN
+	1    3850 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6090183C
+P 5300 4550
+F 0 "#PWR?" H 5300 4300 50  0001 C CNN
+F 1 "GND" V 5305 4422 50  0000 R CNN
+F 2 "" H 5300 4550 50  0001 C CNN
+F 3 "" H 5300 4550 50  0001 C CNN
+	1    5300 4550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60901842
+P 4150 4600
+F 0 "#PWR?" H 4150 4350 50  0001 C CNN
+F 1 "GND" V 4155 4472 50  0000 R CNN
+F 2 "" H 4150 4600 50  0001 C CNN
+F 3 "" H 4150 4600 50  0001 C CNN
+	1    4150 4600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9200 1700 9450 1700
+$Comp
+L pspice:0 #GND?
+U 1 1 60901849
+P 9150 1850
+F 0 "#GND?" H 9150 1750 50  0001 C CNN
+F 1 "0" V 9150 1894 50  0000 L CNN
+F 2 "" H 9150 1850 50  0001 C CNN
+F 3 "~" H 9150 1850 50  0001 C CNN
+	1    9150 1850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9150 1850 9450 1850
+$Comp
+L CapstoneSchematic:LinearActuator LA?
+U 1 1 60901850
+P 2300 2600
+F 0 "LA?" V 2638 1872 50  0000 R CNN
+F 1 "LinearActuator" V 2547 1872 50  0000 R CNN
+F 2 "" H 2650 2350 50  0001 C CNN
+F 3 "" H 2650 2350 50  0001 C CNN
+	1    2300 2600
+	0    -1   -1   0   
+$EndComp
+Text Label 4675 3625 0    50   ~ 0
+SAS_Int2
+Wire Bus Line
+	5750 1400 5750 2400
+Wire Wire Line
+	7300 1800 7300 2250
+Text Label 6895 2650 2    50   ~ 0
+LoRa4
+Text Label 4400 1700 0    50   ~ 0
+LoRa4
+Text Label 4400 1600 0    50   ~ 0
+LoRa3
+Text Label 4400 1500 0    50   ~ 0
+LoRa2
+Wire Bus Line
+	4500 1400 5750 1400
+Entry Wire Line
+	4400 1500 4500 1400
+Entry Wire Line
+	4400 1700 4500 1600
+Entry Wire Line
+	4400 1600 4500 1500
+Entry Wire Line
+	6795 2550 6895 2650
+Entry Wire Line
+	6795 2650 6895 2750
+Wire Wire Line
+	8200 2850 8200 3450
+Wire Wire Line
+	7900 3550 8950 3550
+Wire Wire Line
+	8200 2850 8700 2850
+Wire Wire Line
+	7900 3450 8200 3450
+Wire Wire Line
+	7900 3650 8550 3650
+Wire Wire Line
+	8350 3950 8550 3950
+Wire Wire Line
+	7200 950  7200 1000
+$Comp
+L Connector:Screw_Terminal_01x02 J?
+U 1 1 6090186A
+P 7300 750
+F 0 "J?" V 7264 562 50  0000 R CNN
+F 1 "VoltageIn" V 7173 562 50  0000 R CNN
+F 2 "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_Type094_RT03502HBLU_1x02_P5.00mm_Horizontal" H 7300 750 50  0001 C CNN
+F 3 "~" H 7300 750 50  0001 C CNN
+	1    7300 750 
+	0    1    -1   0   
+$EndComp
+$Comp
+L CapstoneSchematic:LaserSensor U?
+U 1 1 60901870
+P 6100 2200
+F 0 "U?" H 7078 2046 50  0000 L CNN
+F 1 "LaserSensor" H 7078 1955 50  0000 L CNN
+F 2 "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_Type094_RT03503HBLU_1x03_P5.00mm_Horizontal" H 6450 2150 50  0001 C CNN
+F 3 "" H 6450 2150 50  0001 C CNN
+	1    6100 2200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60901876
+P 6350 2000
+F 0 "#PWR?" H 6350 1750 50  0001 C CNN
+F 1 "GND" V 6355 1872 50  0000 R CNN
+F 2 "" H 6350 2000 50  0001 C CNN
+F 3 "" H 6350 2000 50  0001 C CNN
+	1    6350 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 6090187C
+P 6250 2000
+F 0 "#PWR?" H 6250 1850 50  0001 C CNN
+F 1 "+5V" V 6265 2128 50  0000 L CNN
+F 2 "" H 6250 2000 50  0001 C CNN
+F 3 "" H 6250 2000 50  0001 C CNN
+	1    6250 2000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7200 1000 7200 1150
+Connection ~ 7200 1000
+Wire Wire Line
+	7050 1000 7200 1000
+$Comp
+L pspice:0 #GND?
+U 1 1 60901885
+P 7050 1000
+F 0 "#GND?" H 7050 900 50  0001 C CNN
+F 1 "0" V 7050 1044 50  0000 L CNN
+F 2 "" H 7050 1000 50  0001 C CNN
+F 3 "~" H 7050 1000 50  0001 C CNN
+	1    7050 1000
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 6090188B
+P 7300 1000
+F 0 "#PWR?" H 7300 850 50  0001 C CNN
+F 1 "+12V" V 7315 1128 50  0000 L CNN
+F 2 "" H 7300 1000 50  0001 C CNN
+F 3 "" H 7300 1000 50  0001 C CNN
+	1    7300 1000
+	0    1    1    0   
+$EndComp
+Connection ~ 7300 1000
+Wire Wire Line
+	7300 950  7300 1000
+Wire Wire Line
+	7300 1000 7300 1150
+$Comp
+L CapstoneSchematic:Linear_Regulator LR?
+U 1 1 60901894
+P 7300 1450
+F 0 "LR?" H 7325 1665 50  0000 C CNN
+F 1 "Linear_Regulator" H 7325 1574 50  0000 C CNN
+F 2 "Capstone_PCB_Lib:Linear Regulator" H 7300 1250 50  0001 C CNN
+F 3 "" H 7300 1250 50  0001 C CNN
+	1    7300 1450
+	0    1    1    0   
+$EndComp
+$Comp
+L CapstoneSchematic:PhotoResistor PR?
+U 1 1 6090189A
+P 9000 2550
+F 0 "PR?" H 9350 2575 50  0000 C CNN
+F 1 "PhotoResistor" H 9350 2484 50  0000 C CNN
+F 2 "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_Type094_RT03503HBLU_1x03_P5.00mm_Horizontal" H 9350 2400 50  0001 C CNN
+F 3 "" H 9350 2400 50  0001 C CNN
+	1    9000 2550
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 609018A0
+P 8800 3150
+F 0 "#PWR?" H 8800 3000 50  0001 C CNN
+F 1 "+3.3V" H 8815 3323 50  0000 C CNN
+F 2 "" H 8800 3150 50  0001 C CNN
+F 3 "" H 8800 3150 50  0001 C CNN
+	1    8800 3150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7200 1800 7100 1800
+$Comp
+L power:GND #PWR?
+U 1 1 609018A7
+P 7100 1800
+F 0 "#PWR?" H 7100 1550 50  0001 C CNN
+F 1 "GND" V 7105 1672 50  0000 R CNN
+F 2 "" H 7100 1800 50  0001 C CNN
+F 3 "" H 7100 1800 50  0001 C CNN
+	1    7100 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 609018AD
+P 9350 3250
+F 0 "#PWR?" H 9350 3000 50  0001 C CNN
+F 1 "GND" V 9355 3122 50  0000 R CNN
+F 2 "" H 9350 3250 50  0001 C CNN
+F 3 "" H 9350 3250 50  0001 C CNN
+	1    9350 3250
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 609018B3
+P 9350 3850
+F 0 "#PWR?" H 9350 3700 50  0001 C CNN
+F 1 "+3.3V" V 9365 3978 50  0000 L CNN
+F 2 "" H 9350 3850 50  0001 C CNN
+F 3 "" H 9350 3850 50  0001 C CNN
+	1    9350 3850
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 609018B9
+P 8800 2550
+F 0 "#PWR?" H 8800 2300 50  0001 C CNN
+F 1 "GND" V 8805 2422 50  0000 R CNN
+F 2 "" H 8800 2550 50  0001 C CNN
+F 3 "" H 8800 2550 50  0001 C CNN
+	1    8800 2550
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 609018BF
+P 7500 2250
+F 0 "#PWR?" H 7500 2100 50  0001 C CNN
+F 1 "+3.3V" V 7515 2378 50  0000 L CNN
+F 2 "" H 7500 2250 50  0001 C CNN
+F 3 "" H 7500 2250 50  0001 C CNN
+	1    7500 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 609018C5
+P 7500 4350
+F 0 "#PWR?" H 7500 4100 50  0001 C CNN
+F 1 "GND" V 7505 4222 50  0000 R CNN
+F 2 "" H 7500 4350 50  0001 C CNN
+F 3 "" H 7500 4350 50  0001 C CNN
+	1    7500 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 609018CB
+P 8550 3850
+F 0 "#PWR?" H 8550 3600 50  0001 C CNN
+F 1 "GND" H 8555 3677 50  0000 C CNN
+F 2 "" H 8550 3850 50  0001 C CNN
+F 3 "" H 8550 3850 50  0001 C CNN
+	1    8550 3850
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 609018D1
+P 8350 3950
+F 0 "#PWR?" H 8350 3800 50  0001 C CNN
+F 1 "+5V" H 8365 4123 50  0000 C CNN
+F 2 "" H 8350 3950 50  0001 C CNN
+F 3 "" H 8350 3950 50  0001 C CNN
+	1    8350 3950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L CapstoneSchematic:ArduinoRGBShield J?
+U 1 1 609018D7
+P 8750 3850
+F 0 "J?" V 8812 3994 50  0000 L CNN
+F 1 "ArduinoRGBShield" V 8903 3994 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" H 8750 3850 50  0001 C CNN
+F 3 "~" H 8750 3850 50  0001 C CNN
+	1    8750 3850
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 609018DD
+P 7600 2250
+F 0 "#PWR?" H 7600 2100 50  0001 C CNN
+F 1 "+5V" V 7615 2378 50  0000 L CNN
+F 2 "" H 7600 2250 50  0001 C CNN
+F 3 "" H 7600 2250 50  0001 C CNN
+	1    7600 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 609018E3
+P 4400 1900
+F 0 "#PWR?" H 4400 1650 50  0001 C CNN
+F 1 "GND" H 4405 1727 50  0000 C CNN
+F 2 "" H 4400 1900 50  0001 C CNN
+F 3 "" H 4400 1900 50  0001 C CNN
+	1    4400 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 609018E9
+P 4400 1400
+F 0 "#PWR?" H 4400 1250 50  0001 C CNN
+F 1 "+5V" H 4415 1573 50  0000 C CNN
+F 2 "" H 4400 1400 50  0001 C CNN
+F 3 "" H 4400 1400 50  0001 C CNN
+	1    4400 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Sensor_Temperature:MCP9700AT-ELT T?
+U 1 1 609018EF
+P 9350 3550
+F 0 "T?" H 9020 3596 50  0000 R CNN
+F 1 "Temp Sensor" H 9020 3505 50  0001 R CNN
+F 2 "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_Type094_RT03503HBLU_1x03_P5.00mm_Horizontal" H 9350 3150 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001942G.pdf" H 9350 3550 50  0001 C CNN
+	1    9350 3550
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 609018F5
+P 1050 4050
+F 0 "#PWR?" H 1050 3800 50  0001 C CNN
+F 1 "GND" V 1055 3922 50  0000 R CNN
+F 2 "" H 1050 4050 50  0001 C CNN
+F 3 "" H 1050 4050 50  0001 C CNN
+	1    1050 4050
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 609018FB
+P 1050 3550
+F 0 "#PWR?" H 1050 3400 50  0001 C CNN
+F 1 "+5V" V 1065 3678 50  0000 L CNN
+F 2 "" H 1050 3550 50  0001 C CNN
+F 3 "" H 1050 3550 50  0001 C CNN
+	1    1050 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 4050 2200 4050
+Wire Wire Line
+	2300 3700 2300 4050
+Wire Wire Line
+	2200 3450 2300 3450
+$Comp
+L pspice:0 #GND?
+U 1 1 60901910
+P 2450 3700
+F 0 "#GND?" H 2450 3600 50  0001 C CNN
+F 1 "0" V 2450 3744 50  0000 L CNN
+F 2 "" H 2450 3700 50  0001 C CNN
+F 3 "~" H 2450 3700 50  0001 C CNN
+	1    2450 3700
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	6450 2000 6450 2550
+Wire Wire Line
+	6450 3050 6900 3050
+Entry Wire Line
+	6460 3650 6560 3550
+Entry Wire Line
+	6560 3650 6460 3750
+Entry Wire Line
+	945  3850 1045 3750
+$Comp
+L CapstoneSchematic-rescue:Arduino_UNO_R3-MCU_Module A?
+U 1 1 6090191B
+P 7400 3250
+F 0 "A?" V 7446 2106 50  0000 R CNN
+F 1 "Arduino_UNO_R3" V 7355 2106 50  0000 R CNN
+F 2 "Module:Arduino_UNO_R3" H 7550 2200 50  0001 L CNN
+F 3 "https://www.arduino.cc/en/Main/arduinoBoardUno" H 7200 4300 50  0001 C CNN
+	1    7400 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 3550 6560 3550
+Wire Wire Line
+	6560 3650 6900 3650
+Wire Wire Line
+	6895 3150 6900 3150
+Wire Wire Line
+	6895 2750 6900 2750
+Wire Wire Line
+	6895 2650 6900 2650
+Wire Wire Line
+	1045 3950 1050 3950
+Wire Wire Line
+	1045 3850 1050 3850
+Text Label 6900 3650 2    50   ~ 0
+IN2
+Text Label 6900 3550 2    50   ~ 0
+IN1
+Text Label 950  4050 2    50   ~ 0
+IN1
+Wire Wire Line
+	7900 3750 8550 3750
+$Comp
+L CapstoneSchematic:ProxSensor MPS?
+U 1 1 6090192C
+P 6300 6100
+F 0 "MPS?" H 6575 6165 39  0000 C CNN
+F 1 "ProxSensor" H 6575 6248 50  0000 C CNN
+F 2 "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_Type094_RT03503HBLU_1x03_P5.00mm_Horizontal" H 6750 6050 50  0001 C CNN
+F 3 "" H 6750 6050 50  0001 C CNN
+	1    6300 6100
+	-1   0    0    1   
+$EndComp
+$Comp
+L CapstoneSchematic:ProxSensor MPS?
+U 1 1 60901932
+P 7200 6100
+F 0 "MPS?" H 7475 6165 39  0000 C CNN
+F 1 "ProxSensor" H 7475 6248 50  0000 C CNN
+F 2 "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_Type094_RT03503HBLU_1x03_P5.00mm_Horizontal" H 7650 6050 50  0001 C CNN
+F 3 "" H 7650 6050 50  0001 C CNN
+	1    7200 6100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6000 5650 6000 4900
+Wire Wire Line
+	6000 4900 6700 4900
+Wire Wire Line
+	6700 4900 6700 3850
+Wire Wire Line
+	6700 3850 6900 3850
+$Comp
+L power:+5V #PWR?
+U 1 1 6090193C
+P 6400 5950
+F 0 "#PWR?" H 6400 5800 50  0001 C CNN
+F 1 "+5V" H 6415 6123 50  0000 C CNN
+F 2 "" H 6400 5950 50  0001 C CNN
+F 3 "" H 6400 5950 50  0001 C CNN
+	1    6400 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 60901942
+P 7300 5950
+F 0 "#PWR?" H 7300 5800 50  0001 C CNN
+F 1 "+5V" H 7315 6123 50  0000 C CNN
+F 2 "" H 7300 5950 50  0001 C CNN
+F 3 "" H 7300 5950 50  0001 C CNN
+	1    7300 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60901948
+P 6550 5950
+F 0 "#PWR?" H 6550 5700 50  0001 C CNN
+F 1 "GND" H 6555 5777 50  0000 C CNN
+F 2 "" H 6550 5950 50  0001 C CNN
+F 3 "" H 6550 5950 50  0001 C CNN
+	1    6550 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6090194E
+P 5650 5950
+F 0 "#PWR?" H 5650 5700 50  0001 C CNN
+F 1 "GND" H 5655 5777 50  0000 C CNN
+F 2 "" H 5650 5950 50  0001 C CNN
+F 3 "" H 5650 5950 50  0001 C CNN
+	1    5650 5950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 3950 6900 4050
+Wire Wire Line
+	5700 2950 6900 2950
+$Comp
+L CapstoneSchematic:LoRa ULoRa?
+U 1 1 60901956
+P 4300 1400
+F 0 "ULoRa?" H 5678 1346 50  0000 L CNN
+F 1 "LoRa" H 5678 1255 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Horizontal" H 4850 1200 50  0001 C CNN
+F 3 "" H 4850 1200 50  0001 C CNN
+	1    4300 1400
+	-1   0    0    -1  
+$EndComp
+Text Label 6900 3150 2    50   ~ 0
+LoRa2
+Wire Bus Line
+	6795 2400 6800 2400
+Connection ~ 6795 2400
+Wire Bus Line
+	5750 2400 6795 2400
+Text Label 6775 2950 2    50   ~ 0
+SAS_Int2
+Text Label 3850 4300 0    50   ~ 0
+LED_R
+$Comp
+L power:+5V #PWR?
+U 1 1 60901965
+P 5000 4250
+F 0 "#PWR?" H 5000 4100 50  0001 C CNN
+F 1 "+5V" V 5015 4378 50  0000 L CNN
+F 2 "" H 5000 4250 50  0001 C CNN
+F 3 "" H 5000 4250 50  0001 C CNN
+	1    5000 4250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3850 4175 3850 4300
+Entry Wire Line
+	6895 3150 6795 3250
+Wire Wire Line
+	6025 3350 6900 3350
+Wire Wire Line
+	6025 4175 3850 4175
+Wire Wire Line
+	6025 3350 6025 4175
+$Comp
+L power:GND #PWR?
+U 1 1 60901971
+P 3425 3675
+F 0 "#PWR?" H 3425 3425 50  0001 C CNN
+F 1 "GND" V 3430 3547 50  0000 R CNN
+F 2 "" H 3425 3675 50  0001 C CNN
+F 3 "" H 3425 3675 50  0001 C CNN
+	1    3425 3675
+	0    1    1    0   
+$EndComp
+$Comp
+L CapstoneSchematic:SnapActionSwitch SAS?
+U 1 1 60901977
+P 3425 3475
+F 0 "SAS?" H 4050 3650 50  0000 C CNN
+F 1 "SnapActionSwitch" H 4050 3559 50  0000 C CNN
+F 2 "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_Type094_RT03503HBLU_1x03_P5.00mm_Horizontal" H 3375 3375 50  0001 C CNN
+F 3 "" H 3375 3375 50  0001 C CNN
+	1    3425 3475
+	1    0    0    -1  
+$EndComp
+$Comp
+L CapstoneSchematic:SnapActionSwitch SAS?
+U 1 1 6090197D
+P 3425 2750
+F 0 "SAS?" H 4050 2925 50  0000 C CNN
+F 1 "SnapActionSwitch" H 4050 2834 50  0000 C CNN
+F 2 "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_Type094_RT03503HBLU_1x03_P5.00mm_Horizontal" H 3375 2650 50  0001 C CNN
+F 3 "" H 3375 2650 50  0001 C CNN
+	1    3425 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60901983
+P 3425 3100
+F 0 "#PWR?" H 3425 2850 50  0001 C CNN
+F 1 "GND" V 3430 2972 50  0000 R CNN
+F 2 "" H 3425 3100 50  0001 C CNN
+F 3 "" H 3425 3100 50  0001 C CNN
+	1    3425 3100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4950 2850 6900 2850
+Wire Wire Line
+	4675 3625 5700 3625
+Wire Wire Line
+	5700 2950 5700 3625
+Text Label 6775 2850 2    50   ~ 0
+SAS_Int1
+Wire Wire Line
+	3425 3825 3100 3825
+Wire Wire Line
+	3100 2950 3425 2950
+Wire Wire Line
+	4675 3775 4750 3775
+Wire Wire Line
+	4750 3775 4750 4150
+Wire Wire Line
+	3100 2950 3100 3825
+Wire Wire Line
+	4950 2850 4950 3150
+Wire Wire Line
+	4675 3150 4950 3150
+Wire Wire Line
+	4675 2800 4675 2525
+Wire Wire Line
+	4675 2525 3150 2525
+Wire Wire Line
+	3150 2525 3150 2650
+Wire Wire Line
+	3150 2650 2850 2650
+$Comp
+L power:+3.3V #PWR?
+U 1 1 60901998
+P 8050 3050
+F 0 "#PWR?" H 8050 2900 50  0001 C CNN
+F 1 "+3.3V" H 8065 3223 50  0000 C CNN
+F 2 "" H 8050 3050 50  0001 C CNN
+F 3 "" H 8050 3050 50  0001 C CNN
+	1    8050 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8050 3050 7900 3050
+Text Label 4775 3150 0    50   ~ 0
+SAS_Int1
+Text Label 6900 2750 2    50   ~ 0
+LoRa3
+$Comp
+L CapstoneSchematic:4RelayModule RM?
+U 1 1 609019A2
+P 1150 3750
+F 0 "RM?" H 1625 4965 50  0000 C CNN
+F 1 "4RelayModule" H 1625 4874 50  0000 C CNN
+F 2 "" H 1606 4298 50  0001 C CNN
+F 3 "" H 1606 4298 50  0001 C CNN
+	1    1150 3750
+	1    0    0    -1  
+$EndComp
+Entry Wire Line
+	1045 3850 945  3950
+Entry Wire Line
+	945  4050 1045 3950
+Text Label 950  3850 2    50   ~ 0
+IN3
+Text Label 950  3750 2    50   ~ 0
+IN4
+Text Label 950  3950 2    50   ~ 0
+IN2
+Entry Wire Line
+	1045 3650 945  3750
+Wire Bus Line
+	945  4785 6460 4785
+Wire Wire Line
+	6450 2550 5250 2550
+Wire Wire Line
+	5250 2550 5250 900 
+Wire Wire Line
+	5250 900  700  900 
+Wire Wire Line
+	700  900  700  3850
+Connection ~ 6450 2550
+Wire Wire Line
+	6450 2550 6450 3050
+$Comp
+L power:+12V #PWR?
+U 1 1 60901907
+P 2300 3450
+F 0 "#PWR?" H 2300 3300 50  0001 C CNN
+F 1 "+12V" H 2315 3623 50  0000 C CNN
+F 2 "" H 2300 3450 50  0001 C CNN
+F 3 "" H 2300 3450 50  0001 C CNN
+	1    2300 3450
+	0    1    -1   0   
+$EndComp
+Connection ~ 2300 3700
+Wire Wire Line
+	2300 3700 2200 3700
+Wire Wire Line
+	2300 3700 2450 3700
+Wire Wire Line
+	2200 4250 2550 4250
+Wire Wire Line
+	2550 4250 2550 3900
+Wire Wire Line
+	2550 3900 2200 3900
+Wire Wire Line
+	2550 3900 2550 3550
+Wire Wire Line
+	2550 3550 2200 3550
+Connection ~ 2550 3900
+Wire Wire Line
+	2650 2650 2650 4150
+Wire Wire Line
+	2650 4150 2200 4150
+Wire Wire Line
+	2200 3800 2950 3800
+Wire Wire Line
+	2950 3800 2950 4150
+Wire Wire Line
+	2950 4150 4750 4150
+Wire Bus Line
+	945  3950 945  4785
+Wire Wire Line
+	700  3850 950  3850
+Wire Bus Line
+	4500 1400 4500 1600
+Wire Bus Line
+	24045 4600 24045 5435
+Wire Bus Line
+	27600 2050 27600 2250
+Wire Bus Line
+	29895 3050 29895 3900
+Wire Bus Line
+	29560 4285 29560 5435
+Wire Bus Line
+	6795 2400 6795 3250
+Wire Bus Line
+	6460 3635 6460 4785
+$EndSCHEMATC

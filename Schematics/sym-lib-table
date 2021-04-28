@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name CapstoneSchematic)(type Legacy)(uri ${KIPRJMOD}/CapstoneLibrary.pretty/CapstoneLib.lib)(options "")(descr ""))
+  (lib (name CapstoneSchematic-rescue)(type Legacy)(uri ${KIPRJMOD}/CapstoneSchematic-rescue.lib)(options "")(descr ""))
+)
